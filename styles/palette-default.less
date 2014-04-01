@@ -1,0 +1,38 @@
+.text-color() {
+  color: #111;
+}
+.footer-text-color() {
+  color:#fff;
+}
+
+.link-color() {
+  color: hsl(hue(@custom-color), saturation(@custom-color), lightness(#777));
+}
+
+.footer-link-color() {
+  color:white;
+  text-decoration:underline;
+  &:hover{
+      text-decoration:none;
+  }
+}
+
+.asset-background() {
+  background-color: #FFF;
+  .box-shadow(0 0 0 rgba(0,0,0,0.6));
+}
+
+.extension-color() {
+  color: @custom-color;
+  background: transparent url("@{base-url}/images/document_icon.png") no-repeat;
+}
+
+.footer-extension-color() {
+  color:#FFF;
+}
+
+@row-padding: 40px;
+
+@text-padding: 35px;
+
+@content-margin-bottom: 0;
