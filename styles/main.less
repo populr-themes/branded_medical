@@ -22,6 +22,7 @@
 @shadow-color: desaturate(darken(@custom-color, 35%), 20%);
 @populr-theme-version: 1;
 @footer-background-color:#333333;
+@fr-button-color:#EEEEEE;
 
 #reset > .global-reset();
 
@@ -39,7 +40,7 @@
 }
 
 #pop-logo{
-    padding:0 20px;
+    padding:0 10px;
     background-color:#666;
     .border-radius(4px);
 }
@@ -68,7 +69,7 @@ em, i {
 
 #header {
   margin: 0 auto;
-  padding: 25px 0 15px;
+  padding: 5px 0;
   width: @pop-width;
 }
 
@@ -110,7 +111,7 @@ a, a:hover, a:visited, a:active {
   font-family: @headline-font-family;
   font-weight: 200;
   // font-style: italic;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -124,9 +125,10 @@ a, a:hover, a:visited, a:active {
   padding: 0 0 @row-padding;
   margin: 0 auto;
   width: @pop-width;
-  #footer-region &:first-child {
+}
+
+#footer-region .columnizer-row:first-child,#footer-region .columnizer-row:last-child{
     padding-top: 15px;
-  }
 }
 
 .columnizer-col, .columnizer-col2, .columnizer-col3 {
@@ -184,7 +186,9 @@ a, a:hover, a:visited, a:active {
 .asset-type-imagegroup, .asset-type-embedgroup {
   .asset-content { margin-bottom: @content-margin-bottom; }
 }
-
+.asset-type-imagegroup .asset-text{
+    padding-top:25px;
+}
 #main-region .asset-type-imagegroup.asset-size-1{
     .asset-text{
         padding-top:50px;
@@ -192,7 +196,6 @@ a, a:hover, a:visited, a:active {
     .populr-image-slider{ 
         background-color:#E9E9E9;
         .slideshow{
-            
             display:block;
             margin:0 10px;
             .cycle-pager {
@@ -216,12 +219,19 @@ a, a:hover, a:visited, a:active {
     padding-top: 0;
 }
 .link-btn{
-    .horizontalGradient(lighten(@custom-color,10%),@custom-color)!important;
+    .verticalGradient(lighten(@custom-color,10%),@custom-color)!important;
     .border-radius(4px)!important;
-    .box-shadow(0 1px 3px rgba(0,0,0,.25))!important;
+    .box-shadow(0 2px 6px rgba(0,0,0,.65))!important;
     border: 2px solid white!important;
+    font-size:22px!important;
+    padding:10px 40px!important;
 }
 
+
+
+.footer-region .link-btn{
+    .verticalGradient(@fr-button-color,@fr-button-color)!important;
+}
 .body, .description {
   word-wrap: break-word;
 }
