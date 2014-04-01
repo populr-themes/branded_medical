@@ -33,19 +33,21 @@
     
     <div id="header-separator"></div>
     
-    {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="I-3,I-2,I-1|I-2,V-1|I-1|V-1|V-1,V-1|V-1,V-2,V-3|E-2,T-1,T-3|D-1|D-6|D-3,I-1,T-1|T-1,I-4|T-1"}}
+    {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="I-1|I-2,I-2|T-2,I-1|T-1,V-1|V-1,V-1|V-1,V-2,V-3|E-2,T-1,T-3|D-1|D-6|D-3,I-1,T-1|T-1,I-4|T-1"}}
       {{#asset "text" size="1"}}
         <div class="asset-text">
           {{{title}}}
           {{{body}}}
         </div>
       {{/asset}}
+      
       {{#asset "text" size="2"}}
         <div class="asset-text">
           {{{title}}}
           {{{body}}}
         </div>
       {{/asset}}
+      
       {{#asset "text" size="3"}}
         <div class="asset-text">
           {{{title}}}
@@ -55,7 +57,7 @@
 
       {{#asset "imagegroup" size="1"}}
         <div class="asset-content">
-          {{{imageslider images width=960 height=550 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=940 height=330 prevnext-enabled=false pager-enabled=true}}}
         </div>
         {{#if_or title_visible description_visible}}
         <div class="asset-text">
@@ -66,9 +68,13 @@
       {{/asset}}
 
       {{#asset "imagegroup" size="2"}}
-        <div class="asset-content">
-          {{{imageslider images width=469 height=260 prevnext-enabled=false pager-enabled=true}}}
+        <div class="asset-content big">
+          {{{imageslider images width=626 height=260 prevnext-enabled=false pager-enabled=true}}}
         </div>
+        <div class="asset-content small">
+          {{{imageslider images width=313 height=260 prevnext-enabled=false pager-enabled=true}}}
+        </div>
+        
         {{#if_or title_visible description_visible}}
         <div class="asset-text">
           {{{title}}}
@@ -178,7 +184,7 @@
     {{/region}}
 
     <div id="footer-separator"></div>
-    {{#region "columnizer" id="footer-region" max_cols="4" max_auto_assets="1" dummy_content="I-3,I-2,I-1,I-2|I-2,V-1|I-1|V-1|E-1,E-2,E-3,E-4|V-1,V-2,V-3,V-4|E-2,T-1,T-3|D-1|D-6|D-3,I-1,T-1|T-1,I-4|T-1"}}
+    {{#region "columnizer" id="footer-region" max_cols="4" max_auto_assets="1" dummy_content="T-1|I-3,I-2,I-1,I-2|I-2,V-1|I-1|V-1|E-1,E-2,E-3,E-4|V-1,V-2,V-3,V-4|E-2,T-1,T-3|D-1|D-6|D-3,I-1,T-1|T-1,I-4|T-1"}}
 
       {{#asset "text" size="1"}}
         <div class="asset-text">
@@ -208,7 +214,7 @@
 
       {{#asset "imagegroup" size="1"}}
         <div class="asset-content">
-          {{{imageslider images width=960 height=550 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=960 height=330 prevnext-enabled=false pager-enabled=true}}}
         </div>
         {{#if_or title_visible description_visible}}
         <div class="asset-text">

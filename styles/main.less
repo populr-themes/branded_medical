@@ -39,7 +39,7 @@
 }
 
 #pop-logo{
-    padding:0 5px;
+    padding:0 20px;
     background-color:#666;
     .border-radius(4px);
 }
@@ -110,7 +110,7 @@ a, a:hover, a:visited, a:active {
   font-family: @headline-font-family;
   font-weight: 200;
   // font-style: italic;
-  font-size: 40px;
+  font-size: 15px;
   line-height: 1.2;
 }
 
@@ -159,6 +159,10 @@ a, a:hover, a:visited, a:active {
         }
 }
 
+
+#main-region .columnizer-cols2 .columnizer-col:first-child .asset-type-imagegroup .asset-content.small{display:none!important;}
+#main-region .columnizer-cols2 .columnizer-col:last-child .asset-type-imagegroup .asset-content.big{display:none!important;}
+
 .asset {
   .asset-background();
 
@@ -179,6 +183,43 @@ a, a:hover, a:visited, a:active {
 
 .asset-type-imagegroup, .asset-type-embedgroup {
   .asset-content { margin-bottom: @content-margin-bottom; }
+}
+
+#main-region .asset-type-imagegroup.asset-size-1{
+    .asset-text{
+        padding-top:50px;
+    }
+    .populr-image-slider{ 
+        background-color:#E9E9E9;
+        .slideshow{
+            
+            display:block;
+            margin:0 10px;
+            .cycle-pager {
+                background-color: #F7F7F7;
+                border:1px solid #E9E9E9;
+                border-top:none;
+                bottom: -45px;
+                padding: 0 10px;
+                display:block;
+                left:-10px;
+            }
+        }
+         
+    }
+}
+#footer-region .columnizer-row:first-child .asset-type-text .asset-text{
+    padding-top: 0;
+}
+
+#footer-region .columnizer-row:first-child .asset-type-document .asset-text{
+    padding-top: 0;
+}
+.link-btn{
+    .horizontalGradient(lighten(@custom-color,10%),@custom-color)!important;
+    .border-radius(4px)!important;
+    .box-shadow(0 1px 3px rgba(0,0,0,.25))!important;
+    border: 2px solid white!important;
 }
 
 .body, .description {
@@ -328,6 +369,23 @@ a, a:hover, a:visited, a:active {
   }
 }
 .lt-ie8 .cycle-pager { display: none; }
+
+.columnizer-col {
+        #main-region .columnizer-cols2 & { 
+            &:first-child{
+                width:626px;
+                margin-left:0;
+                
+            }
+            &:last-child{
+                width:313px;
+                margin-left:21px;
+                .asset-type-imagegroup .asset-content.big{
+                    display: none!important;
+                }
+            }
+        }
+}
 
 @media screen and (max-width: 960px)  {
   #populr > .mobile-reset();
