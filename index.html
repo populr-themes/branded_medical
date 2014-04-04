@@ -27,7 +27,7 @@
   <script id="theme" type="text/x-handlebars-template">
     <div id="header-row">  
         <div id="header">
-          {{inline_logo_title}}
+            {{{title}}}
         </div>
     </div>
     
@@ -57,7 +57,7 @@
 
       {{#asset "imagegroup" size="1"}}
         <div class="asset-content">
-          {{{imageslider images width=940 height=330 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=940 height=330 prevnext-enabled=false pager-enabled=true crop_single = true}}}
         </div>
         {{#if_or title_visible description_visible}}
         <div class="asset-text">
@@ -69,10 +69,10 @@
 
       {{#asset "imagegroup" size="2"}}
         <div class="asset-content big">
-          {{{imageslider images width=626 height=260 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=626 height=260 prevnext-enabled=false pager-enabled=true crop_single = true}}}
         </div>
         <div class="asset-content small">
-          {{{imageslider images width=313 height=260 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=313 height=260 prevnext-enabled=false pager-enabled=true crop_single = true}}}
         </div>
         
         {{#if_or title_visible description_visible}}
@@ -85,7 +85,7 @@
 
       {{#asset "imagegroup" size="3"}}
         <div class="asset-content">
-          {{{imageslider images width=306 height=230 prevnext-enabled=false pager-enabled=true}}}
+          {{{imageslider images width=306 height=230 prevnext-enabled=false pager-enabled=true crop_single = true}}}
         </div>
         {{#if_or title_visible description_visible}}
         <div class="asset-text">
@@ -375,8 +375,15 @@
       {{/asset}}
 
     {{/region}}
+    
+    <div id="logo-pop-links">
+        <div id="invivo-logo">
+            
+        </div>
+        {{pop_links}}
+    </div>
 
-    {{pop_links}}
+    
 
   </script>
 </body>

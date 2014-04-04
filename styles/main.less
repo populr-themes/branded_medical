@@ -45,6 +45,25 @@
     .border-radius(4px);
 }
 
+#logo-pop-links{
+    
+    background-color:@footer-background-color;
+    
+    #invivo-logo{
+        width:170px;
+        height:52px;
+        background: url("@{base-url}/images/invivolink-white-transparent.png") no-repeat top left;
+        background-size:100% 100%;
+        margin:0 auto 10px;
+    }
+    
+    #pop-links{
+        display: block;
+        margin: 10px auto;
+    }
+    
+}
+
 body {
   font-family: "Helvetica-Neue","Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;;
@@ -61,16 +80,20 @@ strong, b {
 em, i {
   font-style: italic;
 }
+
 #header-row{
     width: auto;
     background-color:#444444;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    padding:5px 0;
+    
 }
 
 #header {
   margin: 0 auto;
-  padding: 5px 0;
   width: @pop-width;
+  background:url("@{base-url}/images/invivo-logo.jpg") no-repeat top left;
+  min-height:40px;
 }
 
 #main-content {
@@ -116,7 +139,6 @@ a, a:hover, a:visited, a:active {
 }
 
 #pop-sharing { padding: 10px 0 5px; }
-#pop-links { margin-top: 15px; }
 
 /* clearfix */
 .columnizer-row:after {display: block; visibility: hidden; height: 0; clear: both; content: ".";} .columnizer-row {*zoom: 1;}
@@ -202,7 +224,7 @@ a, a:hover, a:visited, a:active {
                 background-color: #F7F7F7;
                 border:1px solid #E9E9E9;
                 border-top:none;
-                bottom: -45px;
+                bottom: -48px;
                 padding: 0 10px;
                 display:block;
                 left:-10px;
@@ -213,7 +235,7 @@ a, a:hover, a:visited, a:active {
 }
 
 #main-region .columnizer-row-contents-imagegroup{
-    margin-bottom:20px;
+    margin-bottom:23px;
 }
 
 #footer-region .columnizer-row:first-child .asset-type-text .asset-text{
@@ -409,10 +431,19 @@ a, a:hover, a:visited, a:active {
 
 @media screen and (max-width: 960px)  {
   #populr > .mobile-reset();
-
+  
+#pop img:not(.populr-mobile-noresize):not(#background-image) {
+    width: 97% !important;
+}
+.slideshow{
+    margin:0 1.5%!important;
+}
+.cycle-pager{
+    width:97%!important;
+}
   #header {
     max-width: 720px;
-    padding-left: 15px;
+    margin-left: 15px;
     padding-right: 15px;
     width: auto;
   }
@@ -451,6 +482,9 @@ a, a:hover, a:visited, a:active {
     width: 100%;
     margin-left: 0;
   }
+  #pop-title{
+      font-size:16px!important;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -458,6 +492,9 @@ a, a:hover, a:visited, a:active {
     font-size: 32px !important;
     margin-bottom: 20px !important;
   }
+  .cycle-pager{
+    width:93.5%!important;
+}
 }
 
 @media screen and (max-width: 340px) {
