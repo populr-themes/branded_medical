@@ -136,6 +136,9 @@ a, a:hover, a:visited, a:active {
   // font-style: italic;
   font-size: 18px;
   line-height: 1.2;
+  position:relative;
+  top:10px;
+  left:55px;
 }
 
 #pop-sharing { padding: 10px 0 5px; }
@@ -365,7 +368,10 @@ a, a:hover, a:visited, a:active {
 
   }
 }
-
+.populr-webicon{
+    height:26px;
+    width:26px;
+}
 .documents .download, .tooltipsy {
   background: @custom-color;
   color: #fff;
@@ -443,7 +449,8 @@ a, a:hover, a:visited, a:active {
 }
   #header {
     max-width: 720px;
-    margin-left: 15px;
+    margin-left:auto;
+    margin-right:auto;
     padding-right: 15px;
     width: auto;
   }
@@ -489,11 +496,12 @@ a, a:hover, a:visited, a:active {
 
 @media screen and (max-width: 520px) {
   h1#pop-title {
-    font-size: 32px !important;
+    font-size: 16px !important;
     margin-bottom: 20px !important;
   }
   .cycle-pager{
-    width:93.5%!important;
+    width:96%!important;
+    left:-8px;
 }
 }
 
